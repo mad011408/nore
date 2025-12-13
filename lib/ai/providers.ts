@@ -9,11 +9,9 @@ const CUSTOM_API_KEY = process.env.CUSTOM_API_KEY || "sk_cr_5TfD2yaX7Do6sa4qt5Nn
 const CUSTOM_API_BASE_URL = process.env.CUSTOM_API_BASE_URL || "http://127.0.0.1:5000/v1";
 
 // Create custom OpenAI-compatible provider
-// Use "strict" compatibility to force /chat/completions endpoint (not /responses)
 const customOpenAI = createOpenAI({
   apiKey: CUSTOM_API_KEY,
   baseURL: CUSTOM_API_BASE_URL,
-  compatibility: "strict",
 });
 
 // All available models - using custom API only

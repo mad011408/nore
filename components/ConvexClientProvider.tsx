@@ -44,7 +44,7 @@ let convexClient: ConvexReactClient | null = null;
 let disabledClient: ConvexReactClient | null = null;
 
 function getConvexClient(): ConvexReactClient {
-  if (isConvexConfigured) {
+  if (isConvexConfigured && CONVEX_URL) {
     if (!convexClient) {
       convexClient = new ConvexReactClient(CONVEX_URL);
     }
